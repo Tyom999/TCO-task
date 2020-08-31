@@ -1,0 +1,11 @@
+<div class="P-container">
+  <button *ngIf="router.url.includes('list')" class="G-success-btn" [routerLink]="['', 'manage']">
+      Create +
+  </button>
+  <button *ngIf="router.url.includes('manage')" class="G-warning-btn" [routerLink]="['', 'list']">
+    <- List
+  </button>
+  <button class="G-warning-btn" (click)="logOut()">
+    LogOut
+  </button>
+</div>

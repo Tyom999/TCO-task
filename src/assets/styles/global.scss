@@ -1,0 +1,58 @@
+@import "variables";
+
+button {
+  width: 100%;
+  height: 100%;
+  border: $buttons-border-size solid $inputs-border-color;
+  background-color: $buttons-bg-color;
+  border-radius: $buttons-border-radius;
+  cursor: pointer;
+  transition: .2s all;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+input {
+  width: 100%;
+  height: 100%;
+  border-radius: $inputs-border-radius;
+  border: $inputs-border-size solid $inputs-border-color;
+}
+
+select {
+  width: 100%;
+  height: 100%;
+  border-radius: $inputs-border-radius;
+  border: $inputs-border-size solid $inputs-border-color;
+}
+
+
+.G-success-btn {
+  background-color: #08b408;
+}
+
+.G-warning-btn {
+  background-color: #e5e507;
+}
+
+.G-danger-btn {
+  background-color: #c70303;
+}
+
+.G-disabled-btn {
+  cursor: not-allowed;
+}
+
+.G-status-Paid {
+  background-color: #8ae38a;
+}
+
+.G-status-Pending {
+  background-color: #d2d257;
+}
+
+.G-status-Closed {
+  background-color: #e35a5a;
+}

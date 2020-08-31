@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<div class="P-container">
+  <div class="P-manage-form-container">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="P-manage-form-row">
+        <input placeholder="Title" type="text" formControlName="title">
+        <input placeholder="Description" type="text" formControlName="description">
+      </div>
+      <div class="P-manage-form-row">
+        <select formControlName="status">
+          <option *ngFor="let status of helperService.statusList" [label]="status.name" [value]="status.type"></option>
+        </select>
+        <input placeholder="Date" type="date" formControlName="date">
+      </div>
+      <div class="P-manage-form-row">
+        <input placeholder="Place Name" type="text" formControlName="placeName">
+        <input placeholder="Address" type="text" formControlName="address">
+      </div>
+      <button [class.G-disabled-btn]="form.invalid" [disabled]="form.invalid" type="submit" class="G-success-btn">
+        {{id ? 'Edit' : 'Create'}}
+      </button>
+    </form>
+  </div>
+</div>

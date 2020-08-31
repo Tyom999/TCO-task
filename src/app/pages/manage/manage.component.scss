@@ -1,0 +1,38 @@
+.P-container {
+  width: 99vw;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .P-manage-form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    form {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .P-manage-form-row {
+        display: flex;
+        justify-content: space-between;
+        height: 40px;
+        width: 400px;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        input {
+          height: 100%;
+          width: 45%;
+        }
+        select {
+          height: 100%;
+          width: 45%;
+        }
+      }
+      button {
+        margin-left: 20px;
+        height: 35px;
+        width: 100%;
+      }
+    }
+  }
+}

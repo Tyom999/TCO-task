@@ -1,0 +1,16 @@
+<div class="filter">
+  <form [formGroup]="form">
+    <div class="filters-fields">
+      <select formControlName="status">
+        <option [label]="'None'" [value]="''"></option>
+        <ng-container *ngFor="let option of helperService.filterStatusList">
+          <option *ngIf="option.name" [label]="option.name" [value]="option.type"></option>
+        </ng-container>
+      </select>
+      <input placeholder="Date" type="date" formControlName="date">
+      <input placeholder="Place Name" type="text" formControlName="placeName">
+      <input placeholder="Address" type="text" formControlName="address">
+    </div>
+    <button (click)="filter()">Filter</button>
+  </form>
+</div>

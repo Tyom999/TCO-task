@@ -1,0 +1,10 @@
+<div class="P-container">
+  <div class="P-login-form-container">
+    <input placeholder="Username" type="text" [(ngModel)]="username">
+    <button class="G-success-btn"
+            [disabled]="!username"
+            [class.G-disabled-btn]="!username"
+            (click)="login()">Login
+    </button>
+  </div>
+</div>

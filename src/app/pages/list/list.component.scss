@@ -1,0 +1,76 @@
+.P-filter-container {
+  margin: 20px;
+  display: flex;
+  justify-content: space-between;
+
+
+  .search {
+    width: 220px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    select {
+      width: 100px;
+      height: 30px;
+    }
+
+    .search-field {
+      width: 100px;
+      position: relative;
+
+      input {
+        height: 30px;
+        position: absolute;
+        padding-left: 20px;
+      }
+
+      img {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -20px;
+        top: 3px;
+      }
+    }
+  }
+}
+
+.P-container {
+  padding: 20px;
+  padding-top: 40px;
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+    thead {
+      tr {
+        th {
+          text-align: center;
+        }
+      }
+    }
+
+    tbody {
+      .P-list-actions {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+          height: 30px;
+          width: 45%;
+        }
+      }
+    }
+  }
+
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+  }
+
+
+}

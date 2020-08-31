@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="P-filter-container">
+  <app-filter (filterEvent)="search($event)"></app-filter>
+  <div class="search">
+    <select [(ngModel)]="filterValue" (change)="search($event)">
+      <option [label]="'None'" [value]="null"></option>
+      <ng-container *ngFor="let option of helperService.searchKeys">
+        <option *ngIf="option.key" [label]="option.name" [value]="option.key"></option>
+      </ng-container>
+    </select>
+    <div class="search-field">
+      <input placeholder="Search" type="text" [(ngModel)]="searchValue" (ngModelChange)="search($event)">
+      <img src="assets/images/search.png" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="P-container">
+  <table>
+    <thead>
+    <tr>
+      <th *ngFor="let title of helperService.tableHeaders">{{title}}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of helperService.searchedList"
+        [class.G-status-Closed]="item.status == PlanningStatusTypeEnum.CLOSED"
+        [class.G-status-Paid]="item.status == PlanningStatusTypeEnum.PAID"
+        [class.G-status-Pending]="item.status == PlanningStatusTypeEnum.PENDING">
+      <td>{{item.creator}}</td>
+      <td>{{item.title}}</td>
+      <td>{{item.description}}</td>
+      <td>{{PlanningStatusTypeViewEnum[item.status]}}</td>
+      <td>{{item.date | date:'dd-MM-yyyy HH:mm:ss'}}</td>
+      <td>{{item.placeName}}</td>
+      <td>{{item.address}}</td>
+      <td class="P-list-actions">
+        <button [class.G-disabled-btn]="creator !== item.creator" [disabled]="creator !== item.creator"
+                class="G-warning-btn" [routerLink]="['', 'manage', item.id]">Edit
+        </button>
+        <button [class.G-disabled-btn]="creator !== item.creator" [disabled]="creator !== item.creator"
+                class="G-danger-btn" (click)="deletePlanning(item.id)">Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
