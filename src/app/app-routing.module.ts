@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import {AuthGuard} from "./shared/guards/auth.guard";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'list', pathMatch: 'full' },
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
   { path: 'auth', loadChildren: () => import('./pages/auth/auth.module').then(m => m.AuthModule) },
   { path: 'list', canActivate: [AuthGuard],  loadChildren: () => import('./pages/list/list.module').then(m => m.ListModule) },
   { path: 'detail/:id', canActivate: [AuthGuard], loadChildren: () => import('./pages/detail/detail.module').then(m => m.DetailModule) },
