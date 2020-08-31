@@ -6,25 +6,6 @@
     }
   ],
   "plannings": [
-    {
-      "title": "asdasd55555",
-      "description": "sad",
-      "status": "2",
-      "date": "2020-07-28",
-      "placeName": "sadasd",
-      "address": "sadsasd",
-      "creator": "artyom",
-      "id": 4
-    },
-    {
-      "title": "aaa",
-      "description": "aa",
-      "status": 1,
-      "date": "2020-08-30",
-      "placeName": "aaa",
-      "address": "aaa",
-      "creator": "artyom",
-      "id": 5
-    }
+   
   ]
 }
