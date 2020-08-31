@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {IPlanningTypeModel} from "../../../pages/list/models/planning-type.interface";
-import {Observable, throwError} from "rxjs";
-import {catchError, map} from "rxjs/operators";
+import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
